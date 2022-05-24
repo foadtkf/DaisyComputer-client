@@ -1,0 +1,191 @@
+[
+    {
+      "name": "Phillips Screwdriver",
+      "price": 1608,
+      "quantity": 36,
+      "minquantity": 13,
+      "brand": "Philips",
+      "description": "Bahco Slotted/Phillips Screwdriver Set with Rubber Grip - 5 Pcs | BAHCO | Bahco Africa",
+      "img": "https://pimdatacdn.bahco.com/media/sub623/16a0feb9514f183f.png"
+    },
+    {
+      "name": "Zip Ties",
+      "price": 1324,
+      "quantity": 33,
+      "minquantity": 6,
+      "brand": "Unknown",
+      "description": "The use of small plastic zip ties can make all the difference between a jumbled mess",
+      "img": "https://www.ubuy.com.tr/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNzFPcG1CSDBOSUwuX0FDX1NMMTUwMF8uanBn.jpg"
+    },
+    {
+      "name": "Hex Driver",
+      "price": 1650,
+      "quantity": 33,
+      "minquantity": 17,
+      "brand": "Hp",
+      "description": "",
+      "img": "https://ae01.alicdn.com/kf/H46fd6541cc4a4b60b1cb8fc64201b7c0r.jpg"
+    },
+    {
+      "name": "Tweezers",
+      "price": 2890,
+      "quantity": 39,
+      "minquantity": 8,
+      "brand": "Asus",
+      "description": "",
+      "img": "https://mx.misumi-ec.com/en/linked/material/fs/HZN1/PHOTO/223000306589_001.jpg?$product_main$"
+    },
+    {
+      "name": "Isopropyl Alcohol",
+      "price": 376,
+      "quantity": 23,
+      "minquantity": 10,
+      "brand": "Hp",
+      "description": "",
+      "img": "https://pics.drugstore.com/prodimg/621526/900.jpg"
+    },
+    {
+      "name": "Lint-Free Cloth",
+      "price": 1159,
+      "quantity": 21,
+      "minquantity": 11,
+      "brand": "Hp",
+      "description": "",
+      "img": "https://5.imimg.com/data5/FD/EV/MY-13510997/lint-free-cloth-500x500-500x500.jpg"
+    },
+    {
+      "name": "Cotton Swabs",
+      "price": 2394,
+      "quantity": 24,
+      "minquantity": 7,
+      "brand": "Lenovo",
+      "description": "",
+      "img": "https://m.media-amazon.com/images/I/61y+5G3Ai3S._SL1500_.jpg"
+    },
+    {
+      "name": "New Plastic Zip Bags",
+      "price": 1980,
+      "quantity": 32,
+      "minquantity": 19,
+      "brand": "Dell",
+      "description": "",
+      "img": "https://2.imimg.com/data2/IQ/PW/MY-4263172/writing-panel-zipper-bag-500x500.jpg"
+    },
+    {
+      "name": "Grounding Strap",
+      "price": 331,
+      "quantity": 34,
+      "minquantity": 13,
+      "brand": "Hp",
+      "description": "",
+      "img": "https://www.grote.com/images/84-9239_600px_x_600px.jpg"
+    },
+    {
+      "name": "Canned Air/Vacuum",
+      "price": 1661,
+      "quantity": 34,
+      "minquantity": 18,
+      "brand": "Dell",
+      "description": "",
+      "img": "https://i.pinimg.com/736x/00/08/c7/0008c724f1e405018706175f98f77906.jpg"
+    },
+    {
+      "name": "Prebuilt Tool Kits",
+      "price": 2420,
+      "quantity": 25,
+      "minquantity": 3,
+      "brand": "Dell",
+      "description": "",
+      "img": "https://www.electronicshub.org/wp-content/uploads/2018/02/ORIA-Precision-Screwdriver-Set.png"
+    },
+    {
+      "name": "M8 Double Arm Monitor Desk",
+      "price": 2227,
+      "quantity": 36,
+      "minquantity": 17,
+      "brand": "Hp",
+      "description": "",
+      "img": "https://www.startech.com.bd/image/cache/catalog/wall-mount/dual-monitor-m8-arm-desk-mount-500x500.jpg"
+    },
+    {
+      "name": "Xiaomi Wanbo T2 Max 150 Lumens",
+      "price": 2653,
+      "quantity": 21,
+      "minquantity": 3,
+      "brand": "Asus",
+      "description": "",
+      "img": "https://www.startech.com.bd/image/cache/catalog/projector/xiaomi/wanbo-t2-max/wanbo-t2-max-01-500x500.jpg"
+    },
+    {
+      "name": "Laptop Cooler",
+      "price": 1060,
+      "quantity": 40,
+      "minquantity": 2,
+      "brand": "Dell",
+      "description": "",
+      "img": "https://www.startech.com.bd/image/cache/catalog/laptop-cooler/xtrike-me/fn-811/fn-811-01-500x500.jpg"
+    },
+    {
+      "name": "Micro ATX Motherboard",
+      "price": 1272,
+      "quantity": 23,
+      "minquantity": 3,
+      "brand": "Lenovo",
+      "description": "",
+      "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/asrock/b660m-phantom-gaming-4/b660m-phantom-gaming-4-01-500x500.jpg"
+    },
+    {
+      "name": "Headphone",
+      "price": 1122,
+      "quantity": 30,
+      "minquantity": 18,
+      "brand": "Hp",
+      "description": "",
+      "img": "https://www.startech.com.bd/image/cache/catalog/headphone/razer/kraken-x/kraken-x-1-500x500.jpg"
+    },
+    {
+      "name": "Hammer",
+      "price": 2848,
+      "quantity": 23,
+      "minquantity": 3,
+      "brand": "Apple",
+      "description": "",
+      "img": "https://m.media-amazon.com/images/I/71tTWyypTKL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Motherboard pest",
+      "price": 1250,
+      "quantity": 33,
+      "minquantity": 15,
+      "brand": "Dell",
+      "description": "",
+      "img": "https://i.ytimg.com/vi/HFlJgJRqaUU/maxresdefault.jpg"
+    },
+    {
+      "name": "Volt meter",
+      "price": 423,
+      "quantity": 38,
+      "minquantity": 16,
+      "brand": "Dell",
+      "description": "",
+      "img": "https://m.media-amazon.com/images/I/71XoeLBrd-L._SL1500_.jpg"
+    },
+    {
+      "name": "Computer Brushes",
+      "price": 1306,
+      "quantity": 37,
+      "minquantity": 10,
+      "brand": "Lenovo",
+      "description": "",
+      "img": "https://m.media-amazon.com/images/I/71sMZGPJpQL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Display cleaner",
+      "price": 1608,
+      "quantity": 28,
+      "minquantity": 11,
+      "brand": "Asus",
+      "description": "",
+      "img": "https://static-01.daraz.com.bd/p/da8d74dccb431af4c38d5c3ddf60105d.jpg"
+    }
+  ]

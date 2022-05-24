@@ -4,6 +4,7 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { Link, useNavigate } from 'react-router-dom';
+import { Bounce } from 'react-reveal';
 
 const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -40,7 +41,8 @@ const SignUp = () => {
         console.log('update done');
     }
     return (
-        <div className='flex h-screen justify-center items-center'>
+        <Bounce right>
+        <div className='flex mb-5 justify-center items-center '>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Sign Up</h2>
@@ -126,7 +128,7 @@ const SignUp = () => {
                     >Continue with Google</button>
                 </div>
             </div>
-        </div >
+        </div ></Bounce>
     );
 };
 

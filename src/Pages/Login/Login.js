@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "./../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
+import { Bounce } from "react-reveal";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -40,7 +41,8 @@ if(loading||gLoading){
 }
   const onSubmit = (data) =>{signInWithEmailAndPassword(data.email, data.password);}
   return (
-    <div className="flex h-screen justify-center items-center">
+    <Bounce left>
+    <div className="flex h-screen justify-center items-center" data-theme="light">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
           <h2 className="text-center text-2xl font-bold">Login</h2>
@@ -116,6 +118,7 @@ if(loading||gLoading){
         </div>
       </div>
     </div>
+    </Bounce>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Reviews from '../Shared/Reviews';
-import Tools from '../Shared/Tools';
+import Services from '../Shared/Services/Services';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
 import Extra1 from './Extra1';
@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Tools></Tools>
+            <Services val='six'></Services>
             <BusinessSummary></BusinessSummary>
             <Reviews></Reviews>
             <Extra1></Extra1>

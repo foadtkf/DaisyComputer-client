@@ -13,8 +13,8 @@ const six=props.val
     return (
         <div id="services"   style={{minHeight:'100vh'}}>
             <div className="row">
-            <h1 className='text-primary text-center mt-5'>Tools</h1>
-            <div className="services-container">
+            <h1 className='text-primary text-6xl p-10'>Tools</h1>
+            <div className="services-container mx-5">
             {
                 services.map(service => <Service
                     key={service._id}

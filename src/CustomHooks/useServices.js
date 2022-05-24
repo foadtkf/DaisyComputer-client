@@ -3,9 +3,9 @@ import { useEffect, useState } from "react"
 const useServices=(six)=>{
     const [services,setServices]=useState([])
     useEffect( ()=>{
-        let url=`https://damp-headland-12733.herokuapp.com/products${six}`
+        let url=`http://localhost:5000/products${six}`
         if(!six)
-        url=`https://damp-headland-12733.herokuapp.com/products`
+        url=`http://localhost:5000/products`
         fetch(url)
         .then(res => res.json())
         .then(data => setServices(data));

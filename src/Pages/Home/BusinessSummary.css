@@ -1,0 +1,12 @@
+.subscriber {
+    display: flex;
+    justify-content: space-evenly;
+  
+  }
+ 
+  .number {
+    text-align: center;
+    color: rgb(68, 11, 173);
+    padding: 0 15px;
+  
+  }

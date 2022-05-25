@@ -8,6 +8,9 @@ import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/Signup';
 import Services from './Pages/Shared/Services/Services';
 import Reviews from './Pages/Shared/Reviews';
+import RequireAuth from './Pages/Login/RequireAuth';
+import AddService from './Pages/Shared/AddService/AddService';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -19,6 +22,7 @@ function App() {
         <Route path='/signup' element={<SignUp/>}></Route>
         <Route path='/inventory' element={<Services></Services>}/>
         <Route path='/reviews' element={<Reviews></Reviews>}/>
+        <Route path='/addproducts' element={<RequireAuth><AddService></AddService></RequireAuth>}/>
       </Routes>
     <Footer></Footer>
     </div>

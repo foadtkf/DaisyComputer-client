@@ -3,6 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Tada from 'react-reveal/Tada';
 
 const Navbar = () => {
     const [user] = useAuthState(auth);
@@ -30,7 +31,8 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Daisy Computers</a>
+                <Tada>
+                <a className="btn btn-ghost normal-case text-xl">Daisy Computers</a></Tada>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

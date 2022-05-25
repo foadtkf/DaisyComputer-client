@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
+import { Fade } from 'react-reveal';
 import useReviews from './../../CustomHooks/useReviews';
 
 const Reviews = () => {
     const [reviews,setReviews]=useReviews([])
     return (
-        <div>
+      <Fade left cascade>
+<div>
             <h1 className='text-6xl mb-5'>This is reviews section</h1>
             <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
             {
@@ -20,6 +22,8 @@ const Reviews = () => {
 </div>)
             }</div>
         </div>
+      </Fade>
+        
     );
 };
 

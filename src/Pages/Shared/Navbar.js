@@ -37,6 +37,9 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}
+                    {
+                        user?.photoURL && <img id="optionalstuff" height={50} src={user.photoURL}alt="" className="rounded-full w-11"/>
+                    }
                 </ul>
             </div>
         </div>

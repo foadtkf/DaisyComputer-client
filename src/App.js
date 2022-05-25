@@ -11,6 +11,8 @@ import Reviews from './Pages/Shared/Reviews';
 import RequireAuth from './Pages/Login/RequireAuth';
 import AddService from './Pages/Shared/AddService/AddService';
 import 'react-toastify/dist/ReactToastify.css';
+import AddReviews from './Pages/AddReviews/AddReviews';
+import ManageTools from './ManageTools/ManageTools';
 
 function App() {
   return (
@@ -23,7 +25,11 @@ function App() {
         <Route path='/inventory' element={<Services></Services>}/>
         <Route path='/reviews' element={<Reviews></Reviews>}/>
         <Route path='/addproducts' element={<RequireAuth><AddService></AddService></RequireAuth>}/>
+        <Route path='/addreviews' element={<RequireAuth><AddReviews></AddReviews></RequireAuth>}/>
+        <Route path='/managetools' element={<ManageTools></ManageTools>}/>
+
       </Routes>
+      
     <Footer></Footer>
     </div>
   );

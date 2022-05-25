@@ -28,23 +28,23 @@ const AddService = () => {
   return (
 <Flip top>
     <div className="w-96 mx-auto"  style={{minHeight:'100vh'}}>
-      <h2>Please add an item: </h2>
+      <h2 className="text-4xl text-teal-500">Please add an item: </h2>
       <form className="flex flex-col " onSubmit={handleSubmit(onSubmit)}>
-        <input className="mb-2 w-100 text-black" {...register("name")} placeholder="Name" required/>
+        <input className="mb-2 rounded h-10 w-100 text-black" {...register("name")} placeholder="Name" required/>
         <input
-          className="mb-2 rounded text-black"
+          className="mb-2 rounded h-10 text-black"
           {...register("price")}
           placeholder="Price"
           type="number"
         required/>
         <input
-          className="mb-2 rounded text-black"
+          className="mb-2 rounded h-10 text-black"
           {...register("quantity")}
           placeholder="Quantity"
           type="number"
         required/>
         <input
-          className="mb-2 rounded text-black"
+          className="mb-2 rounded h-10 text-black"
           {...register("minquantity")}
           placeholder="Minimum Quantity"
           type="number"
@@ -55,13 +55,13 @@ const AddService = () => {
           placeholder="Description"
         required/>
         <input
-          className="mb-2 rounded text-black"
+          className="mb-2 rounded h-10 text-black"
           {...register("img")}
           placeholder="Image url"
           type="text"
         required/>
         <input
-          className="mb-2 rounded text-black"
+          className="mb-2 rounded h-10 text-black"
           {...register("brand")}
           placeholder="Brand"
           type="text"

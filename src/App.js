@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Pages/Shared/Navbar';
 import { Route, Routes } from 'react-router';
@@ -13,6 +12,10 @@ import AddService from './Pages/Shared/AddService/AddService';
 import 'react-toastify/dist/ReactToastify.css';
 import AddReviews from './Pages/AddReviews/AddReviews';
 import ManageTools from './ManageTools/ManageTools';
+import Users from './Dashboard/Users';
+import RequireAdmin from './Pages/Login/RequireAdmin';
+import Dashboard from './Dashboard/Dashboard';
+import MyProfile from './Dashboard/MyProfile';
 
 function App() {
   return (
@@ -23,10 +26,16 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path='/signup' element={<SignUp/>}></Route>
         <Route path='/inventory' element={<Services></Services>}/>
-        <Route path='/reviews' element={<Reviews></Reviews>}/>
-        <Route path='/addproducts' element={<RequireAuth><AddService></AddService></RequireAuth>}/>
-        <Route path='/addreviews' element={<RequireAuth><AddReviews></AddReviews></RequireAuth>}/>
-        <Route path='/managetools' element={<ManageTools></ManageTools>}/>
+
+        <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
+          {/* <Route index element={<Reviews></Reviews>}></Route> */}
+        <Route path='addreviews' element={<RequireAuth><AddReviews></AddReviews></RequireAuth>}/>
+          <Route path='reviews' element={<RequireAuth><Reviews></Reviews></RequireAuth>}></Route>
+          <Route path='myprofile' element={<RequireAuth><MyProfile></MyProfile></RequireAuth>}></Route>
+          <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path="addproducts" element={<RequireAdmin><AddService></AddService></RequireAdmin>}></Route>
+          <Route path="managetools" element={<RequireAdmin><ManageTools></ManageTools></RequireAdmin>}></Route>
+        </Route>
 
       </Routes>
       

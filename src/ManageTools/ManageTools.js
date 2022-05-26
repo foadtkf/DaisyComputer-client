@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
+import { Fade } from 'react-reveal';
 import Loading from '../Pages/Shared/Loading';
 import DeleteConfirmModal from './DeleteConfirmModal';
 import ToolsRow from './ToolsRow';
@@ -18,6 +19,7 @@ const ManageDoctors = () => {
     }
 
     return (
+      <Fade left cascade>
         <div>
             <h2 className="text-2xl">Manage Tools: {tools.length}</h2>
             <div class="overflow-x-auto">
@@ -50,6 +52,7 @@ const ManageDoctors = () => {
                 setDeletingDoctor={setDeletingDoctor}
             ></DeleteConfirmModal>}
         </div>
+        </Fade>
     );
 };
 

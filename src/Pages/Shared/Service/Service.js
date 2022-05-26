@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Service.css';
 
@@ -7,7 +7,7 @@ const Service = ({service}) => {
     const navigate = useNavigate();
 
 
-    const navigateToUpdate = id =>{
+    const navigateToPurchase = id =>{
         navigate(`/update/${id}`);
     }
 
@@ -20,7 +20,7 @@ const Service = ({service}) => {
                 quantity>0? <span>{quantity}</span>:<span style={{color:'red'}}>stock out</span>
             }</p></strong>
             <p><strong>{brand}</strong></p>
-            <button onClick={() => navigateToUpdate(_id)} className='btn btn-primary'>Purchase</button>
+            <button onClick={() => navigateToPurchase(_id)} className='btn btn-primary'>Purchase</button>
         </div>
     );
 };

@@ -5,44 +5,43 @@ import auth from "./../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import { Bounce } from "react-reveal";
-import useToken from "../../hooks/useToken";
+import useToken from "../../CustomHooks/useToken";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  const { register, formState: { errors }, handleSubmit } = useForm();
+  const [
+      signInWithEmailAndPassword,
+      user,
+      loading,
+      error,
+  ] = useSignInWithEmailAndPassword(auth);
+
+  const [token] = useToken(user || gUser);
 
   let signInError;
   const navigate = useNavigate();
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
-  
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
-  const [
-    signInWithEmailAndPassword,
-    user,
-    loading,
-    error,
-] = useSignInWithEmailAndPassword(auth);
 
-const [token] = useToken(user|| gUser )
-useEffect( () =>{
-    if (token) {
-        navigate(from, { replace: true });
-    }
-}, [token, from, navigate])
+  useEffect( () =>{
+      if (token) {
+          navigate(from, { replace: true });
+      }
+  }, [token, from, navigate])
 
+  if (loading || gLoading) {
+      return <Loading></Loading>
+  }
 
+  if(error || gError){
+      signInError= <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
+  }
 
-if(error || gError){
-    signInError= <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
-}
-if(loading||gLoading){
-  return <Loading></Loading>
-}
-  const onSubmit = (data) =>{signInWithEmailAndPassword(data.email, data.password);}
+  const onSubmit = data => {
+      signInWithEmailAndPassword(data.email, data.password);
+  }
+
   return (
     <Bounce left>
     <div className="flex h-screen justify-center items-center" data-theme="light">

@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Flip } from "react-reveal";
 import { toast, ToastContainer } from "react-toastify";
+import Loading from "../Loading";
 
 const AddService = () => {
+  const [loading,setLoading] =useState(false)
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    setLoading(true)
     const url = `http://localhost:5000/products`;
     fetch(url, {
       method: "POST",
@@ -21,10 +23,12 @@ const AddService = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+        setLoading(false)
         toast.success('item added successfully',{position: toast.POSITION.TOP_RIGHT})
       });
   };
+  if(loading)
+  <Loading></Loading>
   return (
 <Flip top>
     <div className="w-96 mx-auto"  style={{minHeight:'100vh'}}>

@@ -9,14 +9,25 @@ const ManageTools = (props) => {
         const proceed =window.confirm('R you sure?')
         if(proceed){
             fetch(`http://localhost:5000/products/${id}`,{
-                method:'DELETE'})
-                .then(res=>res.json())
+                method:'DELETE',
+                headers: {
+                  authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+                },})
+                .then(res=>{
+                  if(res.status === 403){
+                  toast.error('Failed to delete tool');
+              }
+                return  res.json()})
                 .then(data=>{
-                    console.log(data)
+                  if (data.modifiedCount > 0) {
+                    toast.error('Deleted Successfully!')
+                }
                     const remaining=services.filter(service=>service._id !== id)
                     setServices(remaining)
-                })
-                toast.error('Deleted Successfully!')
+                    
+                }
+                )
+                
         }
     }
     return (

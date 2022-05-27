@@ -33,7 +33,7 @@ const Portfolio = () => {
   return (
     <div class="hero min-h-screen bg-base-200">
       <div class="hero-content flex-col lg:flex-row">
-        <img src={img} className="-mt-20 w-80 rounded-md" alt="" />
+        <img src={img} className=" w-80 rounded-md" alt="" />
         <div>
           <section className="bg-gradient-to-r from-violet-900 to-white text-primary-content rounded-lg p-2">
           <h1 class="text-5xl font-bold">MD. Fakhrul Islam Fuad</h1>
@@ -106,7 +106,7 @@ const Portfolio = () => {
     My Projects
   </div>
   <div class="peer-checked:pt-2 collapse-content bg-transparent text-primary-content peer-checked:bg-gradient-to-r from-cyan-500 to-white peer-checked:text-secondary-content"> 
-  <div class="grid grid-cols-2 gap-4">
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div class="card w-96 bg-base-100 shadow-xl image-full">
   <figure><img src={laptopdokan} alt="websiteImage" /></figure>
   <div class="card-body">

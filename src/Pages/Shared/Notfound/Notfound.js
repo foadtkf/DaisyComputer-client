@@ -1,14 +1,14 @@
 import React from 'react';
-import HeadShake from 'react-reveal/HeadShake';
+import Wobble from 'react-reveal/Wobble';
 
 const NotFound = () => {
     return (
-        <HeadShake>
+        <Wobble>
         <div >
             
             <img className='w-full' src="https://shots.codepen.io/djtms/pen/Exbdgob-1280.jpg?version=1646005869" alt="" />
         </div>
-        </HeadShake>
+        </Wobble>
     );
 };
 

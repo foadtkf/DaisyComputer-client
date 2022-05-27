@@ -17,6 +17,7 @@ import RequireAdmin from './Pages/Login/RequireAdmin';
 import Dashboard from './Dashboard/Dashboard';
 import MyProfile from './Dashboard/MyProfile';
 import NotFound from './Pages/Shared/Notfound/Notfound';
+import Purchase from './Pages/Shared/Purchase';
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
         <Route path='/signup' element={<SignUp/>}></Route>
         <Route path='/inventory' element={<Services></Services>}/>
 <Route path='*' element={<NotFound/>}/>
+<Route path='purchase/:id' element={
+          <RequireAuth>
+            <Purchase></Purchase>
+          </RequireAuth>} />
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           {/* <Route index element={<Reviews></Reviews>}></Route> */}
         <Route path='addreviews' element={<RequireAuth><AddReviews></AddReviews></RequireAuth>}/>

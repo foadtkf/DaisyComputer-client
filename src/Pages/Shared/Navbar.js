@@ -4,16 +4,20 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Tada from 'react-reveal/Tada';
+import useAdmin from '../../hooks/useAdmin';
 
 const Navbar = () => {
     const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
     const logout = () => {
         signOut(auth);
         localStorage.removeItem('accessToken')
       };
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/inventory">Inventory</Link></li>
+        {
+            !admin && <li><Link to="/inventory">Inventory</Link></li>
+        }
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/about">About</Link></li>
         {

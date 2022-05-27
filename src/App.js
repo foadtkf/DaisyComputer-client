@@ -21,6 +21,8 @@ import Purchase from './Pages/Shared/Purchase';
 import Blog from './Blog/Blog';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import ManageOrders from './Dashboard/ManageOrders';
+import { ToastContainer } from 'react-toastify';
+import MyReview from './Dashboard/MyReview';
 
 function App() {
   return (
@@ -41,7 +43,7 @@ function App() {
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           {/* <Route index element={<Reviews></Reviews>}></Route> */}
         <Route path='addreviews' element={<RequireAuth><AddReviews></AddReviews></RequireAuth>}/>
-          <Route path='reviews' element={<RequireAuth><Reviews></Reviews></RequireAuth>}></Route>
+          <Route path='reviews' element={<RequireAuth><MyReview></MyReview></RequireAuth>}></Route>
           <Route path='myprofile' element={<RequireAuth><MyProfile></MyProfile></RequireAuth>}></Route>
           <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path="addproducts" element={<RequireAdmin><AddService></AddService></RequireAdmin>}></Route>
@@ -52,6 +54,7 @@ function App() {
       </Routes>
       
     <Footer></Footer>
+    <ToastContainer/>
     </div>
   );
 }

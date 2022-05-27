@@ -31,9 +31,9 @@ const AddService = () => {
   <Loading></Loading>
   return (
 <Flip top>
-    <div className="w-96 mx-auto"  style={{minHeight:'100vh'}}>
+    <div className="w-96 mx-auto bg-transparent"  style={{minHeight:'100vh'}}>
       <h2 className="text-4xl text-teal-500">Please add an item: </h2>
-      <form className="flex flex-col " onSubmit={handleSubmit(onSubmit)}>
+      <form className="flex flex-col bg-transparent " onSubmit={handleSubmit(onSubmit)}>
         <input className="mb-2 rounded h-10 w-100 text-black" {...register("name")} placeholder="Name" required/>
         <input
           className="mb-2 rounded h-10 text-black"
@@ -72,7 +72,6 @@ const AddService = () => {
         required/>
 <input type="submit" value="Submit" class="btn" />
       </form>
-      <ToastContainer/>
     </div></Flip>
   );
 };

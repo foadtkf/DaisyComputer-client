@@ -7,6 +7,7 @@ import Extra1 from './Extra1';
 import Extra2 from './Extra2';
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
+import Contact from './Extra/Extra';
 
 const Home = () => {
     
@@ -24,6 +25,7 @@ const Home = () => {
             <Reviews></Reviews>
             <Extra1></Extra1>
             <Extra2></Extra2>
+            <Contact></Contact>
         </div>
     );
 };

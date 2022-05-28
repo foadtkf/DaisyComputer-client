@@ -10,7 +10,7 @@ const ToolsRow = ({ doctor: service, index, refetch, setDeletingDoctor }) => {
             <td>{price}</td>
             <td>{quantity}</td>
             <td>
-                <label onClick={() => setDeletingDoctor(service)} for="delete-confirm-modal" class="btn btn-xs btn-error">Delete</label>
+                <label onClick={() => setDeletingDoctor(service)} for="delete-confirm-modal" className="btn btn-xs btn-error">Delete</label>
             </td>
         </tr>
     );

@@ -70,7 +70,7 @@ const AddService = () => {
           placeholder="Brand"
           type="text"
         required/>
-<input type="submit" value="Submit" class="btn" />
+<input type="submit" value="Submit" className="btn" />
       </form>
     </div></Flip>
   );

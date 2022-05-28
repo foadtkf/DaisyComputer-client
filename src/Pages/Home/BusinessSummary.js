@@ -9,25 +9,24 @@ import {FaTools} from "react-icons/fa"
 const BusinessSummary = () => {
     return (
         <section className='bg-white text-black'>
-           <h2 className="text-center" style={{fontSize:'50px'}}>Summary</h2> 
+           <h2 className="text-center text-6xl font-bold">Summary</h2> 
 
-          <Rotate right> <div className=" subscriber" >
-         
-         <div>
-           <h2 className="number" style={{fontSize:'30px'}}>100k+</h2>
-          <span style={{fontSize:'60px', color:'rgb(68, 11, 173)'}}><BiUserCircle></BiUserCircle> </span><span style={{fontSize:'30px'}}>Customer</span>
+          <Rotate right> <div className=" subscriber grid lg:grid-cols-4 sm:grid-cols-1" >
+         <div className=' hover:shadow-lg hover:shadow-red-600 lg:p-5'>
+           <h2 className="number" >100k+</h2>
+          <span style={{fontSize:'60px', color:'rgb(68, 11, 173)'}}><BiUserCircle></BiUserCircle> </span><span className='font-bold' style={{fontSize:'30px'}}>Customer</span>
          </div>
-         <div>
-           <h2 className="number"style={{fontSize:'30px'}}>120M+</h2>
-           <span style={{fontSize:'60px', color:'rgb(68, 11, 173)'}}><FcCurrencyExchange></FcCurrencyExchange></span><span style={{fontSize:'30px'}}>Annual Revenue</span>
+         <div className=' hover:shadow-lg hover:shadow-red-600 lg:p-5'>
+           <h2 className="number">120M+</h2>
+           <span style={{fontSize:'60px', color:'rgb(68, 11, 173)'}}><FcCurrencyExchange></FcCurrencyExchange></span><span className='font-bold' style={{fontSize:'30px'}}>Annual Revenue</span>
          </div>
-         <div>
-           <h2 className="number"style={{fontSize:'30px'}}>33k+</h2>
-           <span style={{fontSize:'60px', color:'rgb(68, 11, 173)'}}><FcRegisteredTrademark></FcRegisteredTrademark></span><span style={{fontSize:'30px'}}>Review</span>
+         <div className=' hover:shadow-lg hover:shadow-red-600 lg:p-5'>
+           <h2 className="number">33k+</h2>
+           <span style={{fontSize:'60px', color:'rgb(68, 11, 173)'}}><FcRegisteredTrademark></FcRegisteredTrademark></span><span className='font-bold' style={{fontSize:'30px'}}>Review</span>
          </div>
-         <div>
-           <h2 className="number"style={{fontSize:'30px'}}>50+</h2>
-           <span style={{fontSize:'60px', color:'rgb(68, 11, 173)'}}><FaTools></FaTools></span><span style={{fontSize:'30px'}}>Tools</span>
+         <div className=' hover:shadow-lg hover:shadow-red-600 lg:p-5'>
+           <h2 className="number">50+</h2>
+           <span style={{fontSize:'60px', color:'rgb(68, 11, 173)'}}><FaTools></FaTools></span><span className='font-bold' style={{fontSize:'30px'}}>Tools</span>
          </div>
        </div></Rotate>
            </section>

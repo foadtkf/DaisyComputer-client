@@ -72,7 +72,7 @@ const ManageOrders = () => {
                                     {(o.status === 'ship') && <span className='text-success'>Shipping</span>}
                                 </td>
                                 <td>
-                                {(o.status==='') &&  <label onClick={()=>setDeletingProduct(o)} for="delete-order-modal" class="btn btn-error btn-sm">Delete</label>}
+                                {(o.status==='') &&  <label onClick={()=>setDeletingProduct(o)} for="delete-order-modal" className="btn btn-error btn-sm">Delete</label>}
                                 </td>
                             </tr>)
                         }

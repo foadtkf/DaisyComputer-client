@@ -13,7 +13,7 @@ const six=props.val
         <Fade left cascade>
         <div id="services"   style={{minHeight:'100vh'}}>
             <div className="row">
-            <h1 className='text-primary text-6xl p-10'>Tools</h1>
+            <h1 className='text-primary text-6xl font-bold p-10'>Tools</h1>
             <div className="services-container mx-5">
             {
                 services.map(service => <Service

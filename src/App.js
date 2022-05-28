@@ -27,7 +27,7 @@ import Payment from './Pages/Shared/Payment';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App font-serif">
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}/>

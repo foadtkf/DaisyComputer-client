@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import { Fade } from 'react-reveal';
 import Loading from '../Pages/Shared/Loading';
 import UserRow from './UserRow';
 
@@ -14,6 +15,7 @@ const Users = () => {
         return <Loading></Loading>
     }
     return (
+        <Fade left cascade>
         <div>
             <h2 className="text-2xl">All Users: {users.length}</h2>
             <div className="overflow-x-auto">
@@ -38,6 +40,7 @@ const Users = () => {
                 </table>
             </div>
         </div>
+        </Fade>
     );
 };
 

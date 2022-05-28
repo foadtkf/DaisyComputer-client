@@ -49,8 +49,8 @@ const MyProfile = () => {
     return (
         <Fade left cascade>
         <div>
-            <h1 className='text-2xl text-center'>Profile Information</h1>
-            <div className="bg-transparent mx-auto max-w-xs my-5 rounded-2xl w-100 ">
+            <h1 className='text-2xl font-serif font-bold text-center'>My Informations</h1>
+            <div className="bg-transparent mx-auto max-w-xs mb-5 rounded-2xl w-100 ">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">

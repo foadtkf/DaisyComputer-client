@@ -4,8 +4,8 @@ import { useQuery } from 'react-query';
 import Fade from 'react-reveal/Fade';
 import { useForm } from 'react-hook-form';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
 import Loading from './Loading';
 
 const Purchase = () => {
@@ -14,8 +14,8 @@ const Purchase = () => {
     const [purchaseQuantity, setPurchaseQuantity] = useState('')
     const [btnDisable, setBtnDisable] = useState(true)
     const [error, setError] = useState("")
-    const { register, handleSubmit,reset } = useForm();
-    const url = `http://localhost:5000/products/${id}`
+    const { register, handleSubmit, reset } = useForm();
+    const url = `http://localhost:5000/product/${id}`
     const { data: product, isLoading, refetch } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',
         headers: {
@@ -40,13 +40,13 @@ const Purchase = () => {
     }
     const onSubmit = (data) => {
         newQuantity = quantity - purchaseQuantity
-        const price = product.price * quantity
+        const price = product.price  * purchaseQuantity
         const booking = {
             product: name,
             quantity: purchaseQuantity,
             email: user.email,
-            price:price,
-            status:'',
+            price: price,
+            status: '',
             address: data?.address,
             phone: data?.phone
         }
@@ -90,22 +90,22 @@ const Purchase = () => {
             <h1 className="text-3xl text-center">Purchase</h1>
             <Fade left>
                 <div className="bg-no-repeat bg-cover bg-center ">
-                    <div class="hero min-h-screen mx-auto">
-                        <div class="hero-content flex-col lg:flex-row">
+                    <div className="hero min-h-screen mx-auto">
+                        <div className="hero-content flex-col lg:flex-row">
                             <img className='w-[600px] rounded' src={img} alt='' />
                             <div>
-                                <h1 class="text-5xl font-bold">{name}</h1>
-                                <p class="py-6">Description:{description}</p>
+                                <h1 className="text-5xl font-bold">{name}</h1>
+                                <p className="py-6">Description:{description}</p>
                                 <p>Price:{price}</p>
                                 <p>Available:{quantity}</p>
                                 <p>Minimum Quantity for order:{minquantity}</p>
-                                <div class="bg-transparent mx-auto rounded-2xl w-100 ">
+                                <div className="bg-transparent mx-auto rounded-2xl w-100 ">
                                     <form onSubmit={handleSubmit(onSubmit)}>
                                         <div className="form-control w-full max-w-xs">
                                             <label className="label">
                                                 <span className="label-text">Quantity</span>
                                             </label>
-                                            <input type="number" placeholder='Quantity' onInput={handleButton} onKeyUpCapture={handleButton} onKeyDownCapture={handleButton} class="input input-bordered w-full max-w-xs" />
+                                            <input type="number" placeholder='Quantity' onInput={handleButton} onKeyUpCapture={handleButton} onKeyDownCapture={handleButton} className="input input-bordered w-full max-w-xs" />
                                             <span className='text-red-500 text-sm'>{error}</span>
                                             <label className="label">
                                                 <span className="label-text">Email</span>

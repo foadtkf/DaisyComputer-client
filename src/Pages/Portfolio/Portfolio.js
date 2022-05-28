@@ -60,7 +60,6 @@ const Portfolio = () => {
           </Fade>
         </div>
       </div>
-      <Fade left cascade>
             <h1 className='text-3xl font-serif font-bold text-center'>Skills & Technologies</h1>
         <div className="collapse rounded-lg my-5 mx-3  shadow-lg hover:shadow-teal-200">
           <input type="checkbox" className="peer" />
@@ -172,7 +171,7 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-      </Fade>
+     
     </div>
   );
 };

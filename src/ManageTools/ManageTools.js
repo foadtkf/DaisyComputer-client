@@ -8,7 +8,7 @@ import ToolsRow from './ToolsRow';
 const ManageDoctors = () => {
     const [deletingDoctor, setDeletingDoctor] = useState(null);
 
-    const { data: tools, isLoading, refetch } = useQuery('doctors', () => fetch('http://localhost:5000/products', {
+    const { data: tools, isLoading, refetch } = useQuery('doctors', () => fetch('https://sleepy-fjord-78360.herokuapp.com/products', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

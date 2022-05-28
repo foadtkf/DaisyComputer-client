@@ -13,7 +13,7 @@ const ManageOrders = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/booking`, {
+        fetch(`https://sleepy-fjord-78360.herokuapp.com/booking`, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -32,7 +32,7 @@ const ManageOrders = () => {
             })
     }, [email, orders, navigate])
     const handleShipping = id => {
-        fetch(`http://localhost:5000/booking/${id}`, {
+        fetch(`https://sleepy-fjord-78360.herokuapp.com/booking/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

@@ -13,7 +13,7 @@ const AddService = () => {
   } = useForm();
   const onSubmit = (data) => {
     setLoading(true)
-    const url = `http://localhost:5000/products`;
+    const url = `https://sleepy-fjord-78360.herokuapp.com/products`;
     fetch(url, {
       method: "POST",
       headers: {

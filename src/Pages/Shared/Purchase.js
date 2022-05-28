@@ -15,7 +15,7 @@ const Purchase = () => {
     const [btnDisable, setBtnDisable] = useState(true)
     const [error, setError] = useState("")
     const { register, handleSubmit, reset } = useForm();
-    const url = `https://sleepy-fjord-78360.herokuapp.com/product/${id}`
+    const url = `https://sleepy-fjord-78360.herokuapp.com/products/${id}`
     const { data: product, isLoading, refetch } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',
         headers: {
@@ -25,6 +25,7 @@ const Purchase = () => {
     if (isLoading) {
         return <Loading></Loading>
     }
+    console.log(product)
     const { name, img, description, price, quantity, minquantity } = product
     let newQuantity;
     const handleButton = (event) => {

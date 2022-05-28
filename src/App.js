@@ -36,7 +36,6 @@ function App() {
         <Route path='portfolio' element={<Portfolio/>}/>
         <Route path='/signup' element={<SignUp/>}></Route>
         <Route path='/inventory' element={<Services></Services>}/>
-<Route path='*' element={<NotFound/>}/>
 <Route path='purchase/:id' element={
           <RequireAuth>
             <Purchase></Purchase>
@@ -52,7 +51,7 @@ function App() {
           <Route path="managetools" element={<RequireAdmin><ManageTools></ManageTools></RequireAdmin>}></Route>
           <Route path="manageorders" element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
         </Route>
-
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
       
     <Footer></Footer>

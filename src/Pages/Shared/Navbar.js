@@ -70,7 +70,7 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end  lg:hidden">
         {user && (
           <div>
             <Outlet></Outlet>

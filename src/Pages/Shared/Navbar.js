@@ -21,7 +21,7 @@ const Navbar = () => {
           {!isAdmin && user && (
             <> <li><Link to="/dashboard/addreviews">Add Reviews</Link></li>
                     <li><Link to="/dashboard/reviews">My Reviews</Link></li>
-                    <li><Link to="/dashboard/myprofile">My Profile</Link></li>
+                    <li><Link to="/dashboard/myorders">My Orders</Link></li>
                         
                         </>
           )}
